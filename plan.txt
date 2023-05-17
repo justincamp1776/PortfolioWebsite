@@ -1,0 +1,47 @@
+
+Simple HTML Resume:
+
+Using bootstrap and jQuery create a clean and eloquent webpage.
+Keep css, font-size, and other font props to a minimal.
+
+Example site: https://brittanychiang.com/
+
+XL = 2 cols
+left col fixed
+right col scrolly + resume content
+
+<XL = 1 col scrolly + content
+
+Intro block - Left aligned
+Name
+Title
+Power statement
+site links
+
+
+About Section
+
+Experience
+    List
+
+EDU
+bootcamp, AWS, A+
+
+Project references
+
+Sections:
+
+Intro
+About
+Experience
+EDU
+Projects
+
+Each section will have a list of one or more objects.
+Each object.key will have specific div for associated val
+
+Options:
+
+
+create 1 for loop. get length of first object in list to determine appropriate render functions
+
