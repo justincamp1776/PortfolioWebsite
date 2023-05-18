@@ -38,7 +38,8 @@ let intro = [
 let about = [
     {
         "sectionId": 3,
-        "aboutMe":"In 2021, I pivoted into the IT industry. Over the past 18 months I have gained valuable experience working with senior software engineers in customer facing environments. I have displayed the tenacity needed to face challenges and the aptitude required to learn new skills. I am a critical thinker, self-motivated and will add value to any team.",
+        "aboutMe":"In 2021, I graduated from a full stack software development boot camp. I learned the basics of programming and created full stack web applications. I now have 18 months of experience working as a Software Developer and am constantly working to add relevant certifications to my resume. I am currently scheduled to take the AWS Certified Cloud Practitioner exam on May 29th, 2023 and the compTia A+ Certification exam on June 23, 2023.I have proven that I have the aptitude to learn new technologies and the problem solving skills to work through complex issues. I have worked in customer facing environments and thrive under pressure. I have worked beside very talented software engineers and system architects. I know what it takes to be successful in this industry. My aim is to exceed the standard. At R.E. Michel I built full stack applications and  assisted our help desk in crucial moments by trouble-shooting tickets and providing technical guidance to branch managers. I am ready take on new challenges. I am constantly pushing my limits and strive to to display excellence in everything that I do. I work well in team environments and am self-reliant. I know when to ask the right questions and always look for ways to improve. I will provide value to your team and look forward to collaborating with you."
+
     },
 ];
 
