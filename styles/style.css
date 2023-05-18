@@ -1,9 +1,18 @@
+*
+{
+    margin: 0;
+    padding:0;
+}
+
+
+
+
+
 .contentBox{
     display:grid;   
-    max-height: 50%; 
-    max-width: 90%;
+    max-height: 93lvh; 
+    max-width: 100lvh;
     overflow-x: scroll;
-    border:none;
 }
 
 .font-color-w{
@@ -12,6 +21,7 @@
 
 .bg{
     background-color:  rgb(18, 18, 46);
+    
 }
 
 .bg-content{
@@ -23,12 +33,4 @@
     color: rgb(241, 246, 255);
 }
 
-.uline{
-    border-bottom: 1em;
-    border-color: rgb(18, 18, 46);
-}
 
-.sticky{
-    top: 0;
-    position: sticky;
-}
