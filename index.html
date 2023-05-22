@@ -14,14 +14,18 @@
     <script>
 
       $(document).ready(function () {
-        let intro = getIntro();
-        let exp   = getExperience();
-        let about = getAbout();
+      
+
+        let intro     = getIntro();
+        let about     = getAbout();
+        let exp       = getExperience();
+        let projects  = getProjects();
         render(intro);
         render(exp);
         render(about);
+        render(projects);
 
-      
+
       });
 
       function render(data){
@@ -40,7 +44,7 @@
               case 3: 
                 renderAbout(data[i]);
                 break;
-              case 4: 
+              case 5: 
                 renderProjects(data[i]);
                 break;
               default:
@@ -53,7 +57,7 @@
 
       function renderExperience(obj){
         $("#expList").append(
-          '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start bg-content font-color-w">'+
+          '<div class="flex-column align-items-start bg font-color-w mb-3">'+
             '<div class="d-flex w-60 justify-content-around p-2" style="font-size:x-small;">'+
               '<div class="row">'+
                 '<div class="col-lg-3 flex-column">' +
@@ -68,8 +72,26 @@
                     '<li><p class="text-wrap">'+ obj.d2 +'</p></li>' +
                     '<li><p class="text-wrap">'+ obj.d3 +'</p></li>' +
                     '<li><p class="text-wrap">'+ obj.d4 +'</p></li>' +
-                '<ul></div></div></div></a>'
+                '<ul></div></div></div></div>'
         );
+      }
+
+      function renderProjects(obj){
+          $("#projList").append(
+            '<div class="row mb-5"><div class="col-md-3"><div class="row justify-content-center mb-2"><img class="mt-3"src="images/'+ obj.img + '" alt="edi image" height="150px" width="150px"/></div>'+
+             '</div>'+
+              '<div class="col-md-9"><div class="card border-0 w-100 bg">'+
+                '<div class="card-body">'+
+                  '<div class="row"><div class="col-md"><h5 class="card-title" id="projTitle">'+  obj.title +'</h5></div>'+
+                  '<div class="col-md justify-content-start float-left">' +
+                    '<a href="https://www.github.com/justincamp1776/'+ obj.repository +'" target="_blank">'+
+                      '<img src="images/github-mark-white.png" alt="github-logo" style="max-width:25px; max-height:25px;"/></a></div></div>'+
+                  '<div class="row"><div class="flex-column">' +
+                  '<p class="" style="font-size:small" id="projDescr">'+ obj.description +'</p>'+
+                  '<p class="card-text font-italic" style="font-size:small;" id="techStack">'+ obj.techStack +'</p>'+
+                  '</div></div>'+
+                '</div> </div></div>'
+          )
       }
 
       function renderIntro(obj){
@@ -88,53 +110,56 @@
   <body>
       <div class="container-fluid bg font-color-w">
         <div class="row">
-            <div class="col-md pt-5">
+            <div class="col-md pt-5 d-flex justify-content-center">
                 <div class="row">
                   <!-- Left Side of Intro-->
                   <div class="col">
                       <div class="row">
-                          <div class="col">
-                            <img src="images/headShot.png" style="border-radius:50%;background-size: cover; background: transparent;"/>
-                            <ul class="list-unstyled" >
-                              <li class=""id="name"></li>
-                              <li class="font-italic"id="title"></li>
-                              <li id="description"></li>
-                            </ul>
+                        <div class="card" style="width: 18rem; background-color:rgb(18, 18, 46);">
+                          <img class="card-img-top ml-4" src="images/headShot.png" style="height:180px; width:200px;"alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title" id="name"></h5>
+                            <p class="font-weight-light" id="title"></p>
+                            <p class="card-text font-italic" id="description"></p>
                           </div>
-                      </div>
-                      <div class="row ">
-                          <div class="d-flex flex-column bd-highlight ml-2 mb-3">
-                            <a href="#aboutJumpTo" style="color: rgb(241, 246, 255); font-size:small;" class="p-2">about me</a>
-                            <a href="#experienceJumpTo" style="color: rgb(241, 246, 255); font-size:small;" class="p-2">experience</a>
-                            <a href="#projectsJumpTo" style="color: rgb(241, 246, 255); font-size:small;" class="p-2">projects</a>
+                          <ul class="list-group list-group-flush ">
+                            <li class="list-group-item list-unstyled" style="background-color:rgb(18, 18, 46);"> <a href="#aboutJumpTo" style="font-size:small;" class="p-2">about me</a></li>
+                            <li class="list-group-item list-unstyled" style="background-color:rgb(18, 18, 46);"><a href="#experienceJumpTo" style="font-size:small;" class="p-2">experience</a></li>
+                            <li class="list-group-item list-unstyled" style="background-color:rgb(18, 18, 46);"><a href="#projectsJumpTo" style="font-size:small;" class="p-2">projects</a></li>
+                          </ul>
+                          <div class="card-body">
+                            <div class="row d-inline-flex">
+                              <div class="col">
+                                <a href="https://www.github.com/justincamp1776/" target="_blank"><i class="fab fa-git-hub">
+                                  <img src="images/github-mark-white.png" alt="github-logo" style="max-width:25px; max-height:25px;"/>
+                                </i></a>
+                              </div>
+                              <div class="col">
+                                <a href="https://www.linkedin.com/in/justcamp1776/" target="_blank"><i class="fab fa-git-hub">
+                                  <img src="images/LinkedIn-Blue-14@2x.png" alt="linkedin-logo" style="max-width:60px; max-height:60px;"/>
+                                </i></a>
+                              </div>
+                            </div>
                           </div>
-                      </div>
-                      <div class="row d-inline-flex">
-                          <div class="col">
-                            <a href="https://www.github.com/justincamp1776/" target="_blank"><i class="fab fa-git-hub">
-                              <img src="images/github-mark-white.png" alt="github-logo" style="max-width:25px; max-height:25px;"/>
-                            </i></a>
-                          </div>
-                          <div class="col">
-                            <a href="https://www.linkedin.com/in/justcamp1776/" target="_blank"><i class="fab fa-git-hub">
-                              <img src="images/LinkedIn-Blue-14@2x.png" alt="linkedin-logo" style="max-width:60px; max-height:60px;"/>
-                            </i></a>
-                          </div>
+                        </div>
                       </div>
                    </div>
               <div class="col">
-                <!-- extensible -->
+                <div class="row">
+                    <p id="welcome">Hi, I'm Justin. Welcome to my site.</p>
+                </div>
             </div>
           </div>
         </div>
             <div class="col-md pt-5" >
               <div class="contentBox">
                 <div class="justify-content-around font-weight-light mb-3"id="about">
-                  <a id="aboutJumpTo"><h5 class="mb-3 font-italic font-weight-light">About Me</h5></a>
+                  <a id="aboutJumpTo"><h5 class="mb-5 font-italic font-weight-light">About Me</h5></a>
                 </div>
-                <a id="experienceJumpTo"><h5 class="mb-4 font-italic font-weight-light">Experience</h5></a>
+                <a id="experienceJumpTo"><h5 class="mb-5 font-italic font-weight-light">Experience</h5></a>
                   <div class="list-group" id="expList"></div>
-                <a id="projectsJumpTo"><h5 class="mb-4 font-italic font-weight-light">Projects</h5></a>
+                <a id="projectsJumpTo"><h5 class="mb-5 mt-4 font-italic font-weight-light">Projects</h5></a>
+                <div class="list-group" id="projList"></div>
               </div>
             </div>
         </div>

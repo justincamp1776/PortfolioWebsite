@@ -28,7 +28,7 @@
     background-color:  rgb(35, 35, 59);
 }
 
-.list-group-item:hover{
+.list-group-item:hoverd{
     background-color: rgb(24, 24, 45);
     color: rgb(241, 246, 255);
 }

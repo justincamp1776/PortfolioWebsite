@@ -58,13 +58,17 @@ let projects = [
         "sectionId": 5,
         "title": "Order Entry EDI",
         "description": "I consolidated 50 programs into a single application using factories, interfaces, abstractions, database redesign, and custom java packages. This program watches an FTP directory, parses ANSI X12, Excel, or flat files, validates/ scrubs data, writes orders as a tab-delimited messages, imports files into the new ERP platform, and communicates processing results to all relevant parties.",
-        "techStack": ".NET Windows Application OOP, Java Spring Data Service DAO Pattern, MSMS, SVN"
+        "techStack": ".NET Windows Application OOP, Java Spring Data Service DAO Pattern, MSMS, SVN",
+        "img": "motherboard.png",
+        "repository":"EDIOrderEntry"
     },
     {
         "sectionId": 5,
         "title": "XML Invoicing",
         "description": "Conducted thorough code analysis and meetings with stakeholders to define user requirements, mapped existing fields to prophet 21’s  standardized database schema, wrote compact and extensible  code, met with customers to complete acceptance testing and released.",
-        "techStack": ".NET, Java Spring MicroService, SSMS, SVN"
+        "techStack": ".NET, Java Spring MicroService, SSMS, SVN",
+        "img": "invoice.png",
+        "repository":""
     }
 ];
 
