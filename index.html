@@ -14,19 +14,32 @@
     <script>
 
       $(document).ready(function () {
-      
-
         let intro     = getIntro();
+        let stmt      = getOpenStmt();
         let about     = getAbout();
         let exp       = getExperience();
         let projects  = getProjects();
         render(intro);
+        printText(stmt);
         render(exp);
         render(about);
         render(projects);
 
 
       });
+
+      function sleep(milliseconds) {  
+          return new Promise(resolve => setTimeout(resolve, milliseconds));  
+      }  
+
+      async function printText(twoDArr){
+        for(var i=0; i<twoDArr.length; i++){
+          for(var j=0; j<twoDArr[i].length; j++ ){
+            $("#openStmnt").append(twoDArr[i][j])
+            await sleep(200);
+          }
+        }
+      }
 
       function render(data){
         for(var i=0; i<Object.keys(data).length; i++){
@@ -115,17 +128,17 @@
                   <!-- Left Side of Intro-->
                   <div class="col">
                       <div class="row">
-                        <div class="card" style="width: 18rem; background-color:rgb(18, 18, 46);">
+                        <div class="card border-0" style="width: 18rem; background-color:rgb(18, 18, 46);">
                           <img class="card-img-top ml-4" src="images/headShot.png" style="height:180px; width:200px;"alt="Card image cap">
                           <div class="card-body">
                             <h5 class="card-title" id="name"></h5>
                             <p class="font-weight-light" id="title"></p>
                             <p class="card-text font-italic" id="description"></p>
                           </div>
-                          <ul class="list-group list-group-flush ">
-                            <li class="list-group-item list-unstyled" style="background-color:rgb(18, 18, 46);"> <a href="#aboutJumpTo" style="font-size:small;" class="p-2">about me</a></li>
-                            <li class="list-group-item list-unstyled" style="background-color:rgb(18, 18, 46);"><a href="#experienceJumpTo" style="font-size:small;" class="p-2">experience</a></li>
-                            <li class="list-group-item list-unstyled" style="background-color:rgb(18, 18, 46);"><a href="#projectsJumpTo" style="font-size:small;" class="p-2">projects</a></li>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item list-unstyled border-0" style="background-color:rgb(18, 18, 46);"> <a href="#aboutJumpTo" style="font-size:small;" class="p-2">__about me</a></li>
+                            <li class="list-group-item list-unstyled border-0" style="background-color:rgb(18, 18, 46);"><a href="#experienceJumpTo" style="font-size:small;" class="p-2">__experience</a></li>
+                            <li class="list-group-item list-unstyled border-0" style="background-color:rgb(18, 18, 46);"><a href="#projectsJumpTo" style="font-size:small;" class="p-2">__projects</a></li>
                           </ul>
                           <div class="card-body">
                             <div class="row d-inline-flex">
@@ -146,7 +159,7 @@
                    </div>
               <div class="col">
                 <div class="row">
-                    <p id="welcome">HELLO WORLD, I HOPE YOU ARE FINE.</p>
+                    <p class="textBox" id="openStmnt"></p>
                 </div>
             </div>
           </div>

@@ -72,6 +72,18 @@ let projects = [
     }
 ];
 
+let
+
+let openStmt = [
+    ["H", "i", ",", " "],
+    ["I", "'", "m", " "],
+    ["J", "u", "s", "t", "i", "n", ".", " "],
+    ["W", "e", "l", "c", "o", "m", "e", " "],
+    ["t", "o", " "],
+    ["J", "u", "s", "t", "i", "n", ".", " "],
+    ["J", "u", "s", "t", "i", "n", ".", " "],
+]
+
 function getExperience(){
     return experience;
 }
@@ -90,4 +102,8 @@ function getEdu(){
  
 function getProjects(){
     return projects;
+}
+
+function getOpenStmt(){
+    return openStmt;
 }

@@ -5,7 +5,10 @@
 }
 
 
-
+.textBox{
+    max-width:70%;
+    overflow-wrap:normal;
+}
 
 
 .contentBox{
