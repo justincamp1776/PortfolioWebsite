@@ -6,7 +6,8 @@
 
 
 .textBox{
-    max-width:70%;
+    position:fixed;
+    max-width:200px;
     overflow-wrap:normal;
 }
 

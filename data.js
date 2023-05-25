@@ -72,17 +72,12 @@ let projects = [
     }
 ];
 
-let
+let strStmt = "Hi, I'm Justin. Welcome to my site."
 
-let openStmt = [
-    ["H", "i", ",", " "],
-    ["I", "'", "m", " "],
-    ["J", "u", "s", "t", "i", "n", ".", " "],
-    ["W", "e", "l", "c", "o", "m", "e", " "],
-    ["t", "o", " "],
-    ["J", "u", "s", "t", "i", "n", ".", " "],
-    ["J", "u", "s", "t", "i", "n", ".", " "],
-]
+
+function getStrStmt(){
+    return strStmt;
+}
 
 function getExperience(){
     return experience;
@@ -104,6 +99,3 @@ function getProjects(){
     return projects;
 }
 
-function getOpenStmt(){
-    return openStmt;
-}

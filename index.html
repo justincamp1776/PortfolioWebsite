@@ -15,12 +15,12 @@
 
       $(document).ready(function () {
         let intro     = getIntro();
-        let stmt      = getOpenStmt();
+        let stmtArr   = getStrStmt().split(" ");
         let about     = getAbout();
         let exp       = getExperience();
         let projects  = getProjects();
         render(intro);
-        printText(stmt);
+        printText(stmtArr);
         render(exp);
         render(about);
         render(projects);
@@ -32,11 +32,18 @@
           return new Promise(resolve => setTimeout(resolve, milliseconds));  
       }  
 
-      async function printText(twoDArr){
-        for(var i=0; i<twoDArr.length; i++){
-          for(var j=0; j<twoDArr[i].length; j++ ){
-            $("#openStmnt").append(twoDArr[i][j])
-            await sleep(200);
+      async function printText(arrOne){
+        let timeout = 0;
+        console.log(arrOne);
+        for(var i=0; i<arrOne.length; i++){
+          let arrTwo = arrOne[i].split(); 
+          for(var j=0; j<arrTwo.length; j++ ){
+            $("#openStmnt").append(arrTwo[j] + " ")
+            await sleep(170);
+            if(i==2 && j==arrTwo.length-1){
+              await sleep(700);
+              $("#openStmnt").append("</br>")
+            }
           }
         }
       }
