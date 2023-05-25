@@ -72,7 +72,7 @@ let projects = [
     }
 ];
 
-let strStmt = "Hi, I'm Justin. Welcome to my site."
+let strStmt = "Hi, I'm Justin . . . Welcome to my site."
 
 
 function getStrStmt(){

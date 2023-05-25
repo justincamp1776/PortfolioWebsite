@@ -4,20 +4,33 @@
     padding:0;
 }
 
+@media (min-width: 768px){
+    .contentBox{
+        display:grid;   
+        max-height: 93lvh; 
+        max-width: 100lvh;
+        overflow-x: scroll;
+        padding:15px;
+    }
+}
 
-.textBox{
-    position:fixed;
-    max-width:200px;
+
+.ioBox{
+    position:relative;
     overflow-wrap:normal;
+    width:200px;
+    height:100px;
+    background-color: rgb(11, 12, 13);
+    font-size: small;
+   
+}
+
+.outText{
+    font-family:'Courier New', Courier, monospace;
+    color:rgb(247, 251, 24)
 }
 
 
-.contentBox{
-    display:grid;   
-    max-height: 93lvh; 
-    max-width: 100lvh;
-    overflow-x: scroll;
-}
 
 .font-color-w{
     color: rgb(241, 246, 255);
