@@ -31,7 +31,7 @@ let intro = [
         "sectionId": 2,
         "name": "Justin Campbell",
         "title": "Software Developer",
-        "description": "I build full stack web applications.",
+        "description": "I build things for the web.",
     },
 ];
 
