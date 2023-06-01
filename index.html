@@ -57,7 +57,7 @@
 
         function renderExperience(obj){
           $("#expList").append(
-                '<div class="row bg font-color-w mt-5" style="font-size:x-small;">'+
+                '<div class="row bg font-color-w mt-5" style="font-size:small;">'+
                   '<div class="col-lg-3 mb-2">' +
                   '<p class="mb-1 font-italic">'+ obj.startDate + " - " + obj.endDate +'</p>'+
                   '<p class="mb-1">'+ obj.location +'</p>'+
@@ -109,8 +109,17 @@
   </script>
   </head>
   <body>
-      <div class="container-fluid bg font-color-w pt-5">
-        <div class="row">
+      <div class="container-fluid bg font-color-w">
+        <div class="row d-flex justify-content-center pt-1" style="opacity: 25%;">
+          <div class="col-8 d-flex justify-content-around" style="letter-spacing: 2em;">
+            <h1>Design</h1>
+            <h1>-</h1>
+            <h1>Build</h1>
+            <h1>-</h1>
+            <h1>Deploy</h1>
+          </div>
+        </div>
+        <div class="row pt-5">
             <div class="col-md pl-5">
                     <div class="row">
                           <div class="col-md-2 flex-column pb-3">

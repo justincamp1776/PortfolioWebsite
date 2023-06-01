@@ -2,7 +2,7 @@ let experience = [
     {
         "sectionId": 1,
         "jobTitle": "Programmer",
-        "company" : "R.E. Michel",
+        "company" : "R.E. Michel Company",
         "location" : "Glen Burnie, MD",
         "startDate" : "March 2022",
         "endDate" : "March 2023",
