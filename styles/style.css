@@ -14,6 +14,15 @@
     }
 }
 
+@media (max-width: 768px){
+    .collapse-center{  
+        justify-content: center !important;
+    }
+    .collapse-start{
+        justify-content: start !important;
+    }
+}
+
 
 .introContainer {
     position: relative;
