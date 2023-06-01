@@ -21,8 +21,20 @@
     .collapse-start{
         justify-content: start !important;
     }
+    .resize-header{
+        letter-spacing: .4em !important;
+    }
 }
 
+.header{
+    position: fixed;
+    opacity: 0.2;
+}
+
+.header :hover{
+    opacity: .9;
+    color:rgb(253, 252, 244);
+}
 
 .introContainer {
     position: relative;
