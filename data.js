@@ -80,7 +80,7 @@ let projects = [
     {
         "sectionId": 5,
         "title": "Cloud Resume Challenge",
-        "description": "This site is driven by a serverless architecture that is powered by AWS. The backend consists of a simple and efficient HTTP API, NO-SQL DynamoDB, and a lambda function. All documents stored as an object within an S3 Bucket and deployed as a static website using CloudFront.",
+        "description": "This site is driven by a serverless architecture that is powered by AWS. IT is CI/CD using AWS Code Pipeline and GitHub. The backend consists of a simple and efficient HTTP API, NO-SQL DynamoDB, and a lambda function. All documents are stored as objects within an S3 Bucket and deployed as a static website using CloudFront.",
         "techStack": "html5, css, bootstrap, jQuery, AWS Services",
         "img": "cloudresume.png",
         "repository":""
