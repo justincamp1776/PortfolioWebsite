@@ -38,7 +38,7 @@ let intro = [
 let about = [
     {
         "sectionId": 3,
-        "aboutMe":'Welcome to my site! In 2021, I pivoted into the world of software developmnent. "From strength coach to strongly typed languages", as I like to say. The past few years have been arduous but rewarding. I have proven myself in the industry and released projects that our nation\'s critical infrastructure depend on. While I still have a lot to learn, I have a lot to offer to your team and organization. When I am not working or studying I often roll around on mats practicing jiu-jitsu or pretend to be a rock star on my guitar. I enjoy challenges and live for those moments when I cross the last task off the list. If you\'re reading this then I suppose you\'d like to learn about my development experience...I\'ll leave you to it!'
+        "aboutMe":'Welcome to my cloud resume site! In 2021, I pivoted into the world of software development. "From strength coach to strongly typed languages", as I like to say. The past few years have been arduous but rewarding. I have built enterprise level applications in support of one of our nation\'s largest HVAC distributors. While I still have a lot to learn, I have a lot to offer to your team and organization. When I am not working or studying I often roll around on mats practicing jiu-jitsu or pretending to be a rock star on my guitar. If you\'re reading this then I suppose you\'d like to learn about my development experience...I\'ll leave you to it!'
 
     },
 ];
@@ -50,6 +50,13 @@ let edu = [
         "endDate": "Dec 2015",
         "major": "International Missions",
         "result": "22 credits" 
+    },
+    {
+        "sectionId": 4,
+        "school": "AWS",
+        "endDate": "Dec 2015",
+        "major": "AWS Certified Cloud Practitioner",
+        "result": "" 
     },
 ];
 
@@ -69,10 +76,22 @@ let projects = [
         "techStack": ".NET, Java Spring MicroService, SSMS, SVN",
         "img": "invoice.png",
         "repository":""
+    },
+    {
+        "sectionId": 5,
+        "title": "Cloud Resume Challenge",
+        "description": "This site is driven by a serverless architecture that is powered by AWS. The backend consists of a simple and efficient HTTP API, NO-SQL DynamoDB, and a lambda function. All documents stored as an object within an S3 Bucket and deployed as a static website using CloudFront.",
+        "techStack": "html5, css, bootstrap, jQuery, AWS Services",
+        "img": "cloudresume.png",
+        "repository":""
     }
 ];
 
-let strStmt = "Hi, I'm Justin . . . Welcome to my site."
+let apiUrl = "https://bk45zz89f4.execute-api.us-east-1.amazonaws.com";
+
+function getApiUrl(){
+    return apiUrl;
+}
 
 
 function getStrStmt(){

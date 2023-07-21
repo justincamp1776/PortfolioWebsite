@@ -29,6 +29,8 @@
 .header{
     position: fixed;
     opacity: 0.2;
+    font-size: 35px;
+    font-weight: bold;
 }
 
 .header :hover{
@@ -67,6 +69,11 @@
 .bg{
     background-color:  rgb(18, 18, 46);
     
+}
+
+.counter{
+    color: rgb(190, 197, 200);
+    font-size: medium;
 }
 
 
