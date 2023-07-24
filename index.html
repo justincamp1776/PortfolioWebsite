@@ -17,6 +17,8 @@
     <script>
 
       $(document).ready(function () {
+        $('#contactForm').hide();
+
         getContent();
         $.ajax({
           type: "GET",
@@ -38,6 +40,13 @@
         });
       });
 
+      function toggleModal(widget){
+        switch(widget.value){
+          case "true":
+
+        }
+      }
+
       function getViewCountCallback(data){
         //let countArr = data[0].split("");
         //let testNum = "11";
@@ -49,8 +58,9 @@
           $("#hitCount").append('<div class="col-1 counter font-bold">'+ countArr[i] +'</div>')
         }*/
       }
-
+      
       function getContent(){
+        let hdr       = getHeader();
         let intro     = getIntro();
         let about     = getAbout();
         let exp       = getExperience();
@@ -144,24 +154,21 @@
   </head>
   <body>
       <div class="container-fluid bg font-color-w">
-        <div class="row d-flex justify-content-center pt-3 pb-5">
-          <div class="col-8 d-flex justify-content-around header resize-header pb-5" style="letter-spacing: 2em;">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
+        <div class="row d-flex justify-content-start pt-3">
+          <div class="col-md-2 flex-column pb-3">
+            <div class="col" class="align-text-bottom font-italic font-weight-light ml-2"> hit count: <span class="font-weight-bold" style="color:rgb(255, 193, 7);">85</span></div>
+            </div>
         </div>
         <div class="row pt-5">
             <div class="col-md pl-5">
                     <div class="row">
                           <div class="col-md-2 flex-column pb-3">
-                            <p>
-                              <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" active="true">
-                                menu
+                            <button class="btn btn-secondary mb-3" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" aria-expanded="false" aria-controls="contactForm" active="false">
+                              contact
+                            </button>
+                              <button class="btn btn-secondary mb-4 pr-5 pl-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" active="true">
+                                  menu  
                               </button>
-                            </p>
                             <div class="collapse" id="collapseExample">
                               <div class="bg2">
                                 <div class="pb-5 d-flex justify-content-center collapse-start"><a href="#aboutJumpTo" style="font-size:medium; color:#ffffff;">about</a></div>
@@ -199,7 +206,7 @@
                                   </div>
                                 </div>
                           </div>
-                          </div>
+                        </div>
                     </div>
               <div class="col-md d-flex justify-content-center" >
                 <div class="contentBox">
@@ -248,4 +255,117 @@
             <p class="d-flex justify-content-center">Baltimore, MD </p>
         </div>
     </body>
+
+    <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p style="color:red;">This form is currently unavailable. I apologize for the inconvenience.</p>
+        <h5 class="modal-title" id="staticBackdropLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">First Name</label>
+            <input type="email" class="form-control" id="inputEmail4">
+          </div>
+          <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Last Name</label>
+            <input type="password" class="form-control" id="inputPassword4">
+          </div>
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Company</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="who are you representing?">
+          </div>
+          <div class="col-12">
+            <label for="inputAddress2" class="form-label">Email Address</label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="bestRecruiter@email.com">
+          </div>
+          <div class="col-12">
+            <label for="inputAddress2" class="form-label">Phone Number</label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="(555) 555-5555">
+          </div>
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">City</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">State</label>
+            <select id="inputState" class="form-select">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="inputZip" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+          <div class="co-12">
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Leave a message</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+            </div>
+        </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submiit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Scrollable modal 
+    <div class="modal-dialog modal-dialog-scrollable" id="contactForm">
+      <form class="row g-3">
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail4">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Password</label>
+        <input type="password" class="form-control" id="inputPassword4">
+      </div>
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">Address</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      </div>
+      <div class="col-12">
+        <label for="inputAddress2" class="form-label">Address 2</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">City</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">State</label>
+        <select id="inputState" class="form-select">
+          <option selected>Choose...</option>
+          <option>...</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label for="inputZip" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="inputZip">
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            Check me out
+          </label>
+        </div>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </div>
+    </form>
+</div>-->
+
+
 </html>

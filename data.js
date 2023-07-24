@@ -1,3 +1,13 @@
+let header = [
+    {
+        "sectionId": 0,
+        "greeting": "Welcome to my AWS cloud resume.",
+        "countPhrase": "You are visitor number",
+        "farewell": "Happy Scrolling!"
+    }
+]
+
+
 let experience = [
     {
         "sectionId": 1,
@@ -25,6 +35,8 @@ let experience = [
     }
 
 ];
+
+
 
 let intro = [
     {
@@ -89,10 +101,13 @@ let projects = [
 
 let apiUrl = "https://bk45zz89f4.execute-api.us-east-1.amazonaws.com";
 
+function getHeader(){
+    return header;
+}
+
 function getApiUrl(){
     return apiUrl;
 }
-
 
 function getStrStmt(){
     return strStmt;
