@@ -20,7 +20,7 @@
         $('#contactForm').hide();
 
         getContent();
-        $.ajax({
+        /*$.ajax({
           type: "GET",
           url: getApiUrl() + "/items",
           data: null,
@@ -31,13 +31,13 @@
             getViewCountCallback(response);
           },
           failure: function (response){
-              alert("Unable to retrieve view count at this time. Please try again later.");
+              //alert("Unable to retrieve view count at this time. Please try again later.");
           },
           error: function (response){
             //getViewCountCallback(response);
-              alert("An error has occured while retrieving site hit count.");
+              //alert("An error has occured while retrieving site hit count.");
           },
-        });
+        });*/
       });
 
       function toggleModal(widget){
@@ -101,7 +101,7 @@
 
         function renderExperience(obj){
           $("#expList").append(
-                '<div class="row bg font-color-w mt-5" style="font-size:small;">'+
+                '<div class="row mt-5" style="font-size:small;">'+
                   '<div class="col-lg-3 mb-2">' +
                   '<p class="mb-1 font-italic">'+ obj.startDate + " - " + obj.endDate +'</p>'+
                   '<p class="mb-1">'+ obj.location +'</p>'+
@@ -126,7 +126,7 @@
           $("#projList").append(
             '<div class="row mb-5"><div class="col-md-3"><div class="row justify-content-start mb-2"><img class="mt-4"src="images/'+ obj.img + '" alt="edi image" height="150px" width="150px"/></div>'+
              '</div>'+
-              '<div class="col-md-9"><div class="card border-0 w-100 bg">'+
+              '<div class="col-md-9"><div class="card border-0 w-100">'+
                 '<div class="card-body center">'+
                   '<div class="row clearfix"><h5 class="card-title" id="projTitle">'+  obj.title + "  " +
                     '<a href="https://www.github.com/justincamp1776/'+ obj.repository +'" target="_blank">'+
@@ -147,115 +147,144 @@
       }
 
       function renderAbout(obj){
-        $("#about").append('<p>'+ obj.aboutMe +'</p>');
+        $("#about").append('<p>'+ obj.aboutPro +'</p>');
       }
 
   </script>
   </head>
   <body>
-      <div class="container-fluid bg font-color-w">
-        <div class="row d-flex justify-content-start pt-3">
-          <div class="col-md-2 flex-column pb-3">
-            <div class="col" class="align-text-bottom font-italic font-weight-light ml-2"> hit count: <span class="font-weight-bold" style="color:rgb(255, 193, 7);">85</span></div>
-            </div>
-        </div>
-        <div class="row pt-5">
-            <div class="col-md pl-5">
-                    <div class="row">
-                          <div class="col-md-2 flex-column pb-3">
-                            <!--<button class="btn btn-secondary mb-3" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" aria-expanded="false" aria-controls="contactForm" active="false">
-                              contact
-                            </button>--->
-                              <button class="btn btn-secondary mb-4 pr-5 pl-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" active="true">
-                                  menu  
-                              </button>
-                            <div class="collapse" id="collapseExample">
-                              <div class="bg2">
-                                <div class="pb-5 d-flex justify-content-center collapse-start"><a href="#aboutJumpTo" style="font-size:medium; color:#ffffff;">about</a></div>
-                                <div class="pb-5 d-flex justify-content-center collapse-start"><a href="#experienceJumpTo" style="font-size:medium; color:#ffffff;">experience</a></div>
-                                <div class="pb-5 d-flex justify-content-center collapse-start"><a href="#projectsJumpTo" style="font-size:medium; color:#ffffff;">projects</a></div>
-                                <div class="d-flex justify-content-center collapse-start pb-5">
-                                  <a href="https://www.github.com/justincamp1776/" target="_blank"><i class="fab fa-git-hub">
-                                    <img src="images/github-mark-white.png" alt="github-logo" style="max-width:35px; max-height:35px;"/>
-                                  </i></a>
+      <div class="container-fluid">
+        <div class="row">
+                          <!--LEFT SIDE COLUMN-->
+                          <!--Hit Count Row-->
+                              <div class="col-lg pl-5 bg font-color-w">
+                                <div class="row justify-content-start pt-3">
+                                  <div class="col-md-2 flex-column pb-3">
+                                    <div class="col" class="align-text-bottom font-italic font-weight-light ml-2"> hit count: <span class="font-weight-bold" style="color:rgb(255, 193, 7);">85</span>
+                                  </div>
                                 </div>
-                                <div class="d-flex justify-content-center collapse-start">
-                                  <a href="https://www.linkedin.com/in/justcamp1776/" target="_blank"><i class="fab fa-git-hub">
-                                    <img src="images/in.png" alt="linkedin-logo" style="max-width:80px; max-height:80px;"/>
-                                  </i></a>
+                              <!---->
                                 </div>
-                              </div>
-                            </div>
-                          </div>
-                            <div class="col-md-8"> 
-                              <div class="row ">
-                                <div class="col-12 d-flex justify-content-start">
-                                  <img class="card-img-top collapse-center" src="images/nixon.jpg" style="width: 22rem;" alt="Card image cap">
-                                </div>
-                              </div>
                                 <div class="row">
-                                  <div class="col-8 d-flex justify-content-start pt-5">
-                                    <div class="card border-0 pt-3" style="background-color:rgb(18, 18, 46); white-space: nowrap;">
-                                      <div class="card-body">
-                                        <h2 class="card-title d-flex justify-content-start" id="name"></h2>
-                                        <h5 class="font-weight-light d-flex justify-content-start"  id="title"></h5>
-                                        <div class="border-bottom border-warning"></div>
-                                        <p class="font-weight-light d-flex justify-content-start pt-4" style="font-size:large; "id="description"></p>
+                                  <!--Menu Drop Down-->
+                                  <div class="col-md-2 flex-column pb-3">
+                                    <button class="btn btn-secondary mb-4 pr-5 pl-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" active="true">
+                                        menu  
+                                    </button>
+                                    <div class="collapse" id="collapseExample">
+                                      <div class="bg2">
+                                        <div class="pb-5 d-flex justify-content-center collapse-start"><a href="#aboutJumpTo" style="font-size:medium; color:#ffffff;">about</a></div>
+                                        <div class="pb-5 d-flex justify-content-center collapse-start"><a href="#experienceJumpTo" style="font-size:medium; color:#ffffff;">experience</a></div>
+                                        <div class="pb-5 d-flex justify-content-center collapse-start"><a href="#projectsJumpTo" style="font-size:medium; color:#ffffff;">projects</a></div>
+                                        <div class="d-flex justify-content-center collapse-start pb-5">
+                                          <a href="https://www.github.com/justincamp1776/" target="_blank"><i class="fab fa-git-hub">
+                                            <img src="images/github-mark-white.png" alt="github-logo" style="max-width:35px; max-height:35px;"/>
+                                          </i></a>
+                                        </div>
+                                        <div class="d-flex justify-content-center collapse-start">
+                                          <a href="https://www.linkedin.com/in/justcamp1776/" target="_blank"><i class="fab fa-git-hub">
+                                            <img src="images/in.png" alt="linkedin-logo" style="max-width:80px; max-height:80px;"/>
+                                          </i></a>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
+                                  <!--Profile Card-->
+                                    <div class="col-md-8"> 
+                                      <div class="row ">
+                                        <div class="col-12 d-flex justify-content-start">
+                                          <img class="card-img-top collapse-center" src="images/nixon.jpg" style="width: 22rem;" alt="Card image cap">
+                                        </div>
+                                      </div>
+                                      <!--Info Card-->
+                                        <div class="row">
+                                          <div class="col-8 d-flex justify-content-start pt-5">
+                                            <div class="card border-0 pt-3" style="background-color:rgb(18, 18, 46); white-space: nowrap;">
+                                              <div class="card-body">
+                                                <h2 class="card-title d-flex justify-content-start" id="name"></h2>
+                                                <h5 class="font-weight-light d-flex justify-content-start"  id="title"></h5>
+                                                <div class="border-bottom border-warning"></div>
+                                                <p class="font-weight-light d-flex justify-content-start pt-4" style="font-size:large; "id="description"></p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      <!---->
+                                    </div>
+                                  <!---->
                                 </div>
-                          </div>
+                              </div>
+                      <!--RIGHT SIDE COL-->
+                      <!--Scroll - About, Experience, Projects -->
+                      <div class="col-lg" > <!--justify-content-center-->
+                        <div class="contentBox">
+                                <div class="row pt-3 mb-5 w-100">
+                                  <!--Full Row Header-->
+                                    <div class="col d-flex around">
+                                      <img class="left" src="images/coach.png" style="max-height: 40px; max-width: 40px;" alt="coach img"><h3> Coach</h3>
+                                    </div>
+                                    <div class="col d-flex around pt-2">
+                                      <p style="font-size:medium; font-weight:300;">=> to =></p>
+                                    </div>
+                                    <div class="col d-flex around">
+                                      <img class="left" src="images/coding.png" style="max-height: 40px; max-width: 40px;" alt="coding img"> <h3>Coder</h3>
+                                    </div>
+                                </div>
+                                <!--Full Span About Label
+                                <div class="row">
+                                    <div class="col-12 mb-5 ">
+                                      <a id="aboutJumpTo"><h6 class="align-text-bottom font-italic font-weight-light ml-2" style="letter-spacing: .3em;">About Me</h6</a>
+                                    </div>
+                                </div>
+                                Closed-->
+                                      <!--Content --><div class="justify-content-around font-weight-light mb-3 p-3 text-indent"id="about" style="letter-spacing:.13em;"></div>
+                                      <div class="row mt-5 mb-2 w-100 border-bottom border-warning">
+                                          <a id="projectsJumpTo"><h5 class="mt-4 align-text-bottom font-italic font-weight-light ml-2">Projects</h5></a>
+                                        </div>
+                                        <!--Content --><div class="list-group" id="projList"></div>
+                                        <div class="row mb-5 w-100 border-bottom border-warning">
+                                        <a id="experienceJumpTo"><h5 class="align-text-bottom font-italic font-weight-light ml-2">Experience</h5></a>
+                                      </div>
+                                      <!--Content --><div class="list-group" id="expList"></div>
+                                    </div>
+                                <!---->
+                          
                         </div>
-                    </div>
-              <div class="col-md d-flex justify-content-center" >
-                <div class="contentBox">
-                  <div class="row w-100 justify-content-md-end pb-5" >
-                    <!--<div class="col-3"><div class="font-italic" style="font-size:medium;">Hit Count</div></div>-->
-                    <div class="col" id="hitCount" class="align-text-bottom font-italic font-weight-bold ml-2" style="letter-spacing: .3em;"></div>
-                </div>
-                  <div class="row mb-5 w-100">
-                  <a id="aboutJumpTo"><h5 class="align-text-bottom font-italic font-weight-light ml-2" style="letter-spacing: .3em;">About Me</h5></a>
-                  </div>
-                  <div class="justify-content-around font-weight-light mb-3"id="about" style="letter-spacing:.13em;"></div>
-                  <div class="row mt-5 mb-2 w-100 border-bottom border-warning">
-                    <a id="experienceJumpTo"><h5 class="align-text-bottom font-italic font-weight-light ml-2">Experience</h5></a>
-                  </div>
-                  <div class="list-group" id="expList"></div>
-                  <div class="row mt-5 mb-2 w-100 border-bottom border-white">
-                  <a id="projectsJumpTo"><h5 class="mt-4 align-text-bottom font-italic font-weight-light ml-2">Projects</h5></a>
-                  </div>
-                  <div class="list-group" id="projList"></div>
-                </div>
-              </div>
-            </div>
+                      </div>
+                    <!---->
         </div>
-      <div class="bg-dark">
-          <div class="container-fluid align-items-center font-color-w pb-5" style="min-height: 200px;">
-            <div class="row d-flex justify-content-between pt-5 pl-4 pb-5">
-              <div class="col-md-4 offset-md-1">
-                <ul class="list-unstyled">
-                  <li><a class="font-color-w" href="#aboutJumpTo">About</a></li>
-                  <li><a class="font-color-w" href="#experienceJumpTo">Experience</a></li>
-                  <li><a class="font-color-w" href="#projectsJumpTo">Projects</a></li>
-                  <li><a class="font-color-w" href="#">Contact</a></li>
-                </ul>
-              </div>
-              <div class="col-md-4 offset-md-1 flex-column">
-                <a href="https://aws.amazon.com/what-is-cloud-computing"><img src="https://d0.awsstatic.com/logos/powered-by-aws-white.png" alt="Powered by AWS Cloud Computing"></a>
-              </div>
-            </div>
-          </div>
       </div>
-        <div class="row " style="max-height:5px;">
-          <div class="col-md-6 pt-1">
-            <p class="d-flex justify-content-center"><span>&copy; </span> 2023 All rights are reserved.</p>
-          </div>
-          <div class="col-md-6 pt-1">
-            <p class="d-flex justify-content-center">Baltimore, MD </p>
-        </div>
-    </body>
-    </html>
+
+        <!--Footer-->
+              <div class="bg-dark">
+                <div class="container-fluid align-items-center font-color-w pb-5" style="min-height: 200px;">
+                  <div class="row d-flex justify-content-between pt-5 pl-4 pb-5">
+                    <div class="col-md-4 offset-md-1">
+                      <ul class="list-unstyled">
+                        <li><a class="font-color-w" href="#aboutJumpTo">About</a></li>
+                        <li><a class="font-color-w" href="#experienceJumpTo">Experience</a></li>
+                        <li><a class="font-color-w" href="#projectsJumpTo">Projects</a></li>
+                        <li><a class="font-color-w" href="#">Contact</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-md-4 offset-md-1 flex-column">
+                      <a href="https://aws.amazon.com/what-is-cloud-computing"><img src="https://d0.awsstatic.com/logos/powered-by-aws-white.png" alt="Powered by AWS Cloud Computing"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          <!--Trailing Copyright-->
+              <div class="row " style="max-height:5px;">
+                  <div class="col-md-6 pt-1">
+                    <p class="d-flex justify-content-center"><span>&copy; </span> 2023 All rights are reserved.</p>
+                  </div>
+                  <div class="col-md-6 pt-1">
+                    <p class="d-flex justify-content-center">Baltimore, MD </p>
+                  </div>
+              </div>
+  </body>
+</html>
     <!-- Modal 
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
