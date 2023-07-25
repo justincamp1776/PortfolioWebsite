@@ -79,7 +79,7 @@ let projects = [
     {
         "sectionId": 5,
         "title": "Order Entry EDI",
-        "description": "Consolidated 50 programs into a single application using OOP. This program utilizes file watcher on an FTP directory and parses order entries of various formats. Once each file is validated, customer part numbers are mapped to vendor item numbers. Order header and lines are dynamically built after each item is checked for availability within the customers market area. After orders complete processing and email is dynamically constructed and sent to all relavent parties.",
+        "description": "Consolidated 50 programs into a single application using OOP. This program utilizes file watcher on an FTP directory and parses order entries of various formats. Once each file is validated the customer part numbers are mapped to vendor item numbers. Order headers and lines are dynamically built after each item is checked for availability within the customers market area. After orders complete processing an email is dynamically constructed and programmatically sent to all relavent parties.",
         "techStack": ".NET Windows Application, Java Spring Data Service, SQL Server, SVN",
         "img": "motherboard.png",
         "repository":"EDIOrderEntry"
@@ -87,7 +87,7 @@ let projects = [
     {
         "sectionId": 5,
         "title": "XML Invoicing",
-        "description": "Conducted thorough code analysis and meetings with stakeholders to define user requirements, mapped existing fields to the ERP\'s (Prophet 21)  standardized database schema, wrote compact and extensible  code, met with customers to complete acceptance testing.",
+        "description": "Met with stakeholders to define user requirements. Conducted thorough analysis in order to map legacy fields to the new ERP\'s (Prophet 21) standardized database schema. I wrote compact and extensible  code, conducted manual unit tests and met with customers to complete acceptance testing.",
         "techStack": ".NET, Java Spring MicroService, SQL Server, SVN",
         "img": "invoice.png",
         "repository":""
@@ -95,7 +95,7 @@ let projects = [
     {
         "sectionId": 5,
         "title": "Cloud Resume Challenge",
-        "description": "This site is driven by a serverless architecture that is powered by AWS. It is CI/CD using AWS Code Pipeline and GitHub. The backend consists of a simple and efficient HTTP API, NO-SQL DynamoDB, and a lambda function. All documents are stored as objects within an S3 Bucket and deployed as a static website using CloudFront.",
+        "description": "This site is driven by a serverless architecture that is powered by AWS. It is CI/CD using AWS Code Pipeline and GitHub. The backend consists of a simple and efficient http API, no-sql, dynamoDB, and a lambda function. All documents are stored as objects within an S3 Bucket and deployed as a static website using CloudFront.",
         "techStack": "html5, css, bootstrap, jQuery, Github, AWS Services",
         "img": "cloudresume.png",
         "repository":""
