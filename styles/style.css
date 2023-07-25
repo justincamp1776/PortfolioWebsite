@@ -60,10 +60,24 @@
     color: rgb(241, 246, 255);
 }
 
+.font-blue{
+    color: rgb(18, 18, 46);
+}
+
+.font-yellow{
+    color: rgb(255, 193, 7);
+}
+
 .bg{
     background-color:  rgb(18, 18, 46);
     
 }
+
+.bg2{
+    background-color: #f5f5f5;
+}
+
+
 
 .counter{
     color: rgb(190, 197, 200);
