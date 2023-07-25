@@ -13,6 +13,7 @@ let experience = [
         "sectionId": 1,
         "jobTitle": "Programmer",
         "company" : "R.E. Michel Company",
+        "imgPath": "images/product.png",
         "location" : "Glen Burnie, MD",
         "startDate" : "March 2022",
         "endDate" : "March 2023",
@@ -23,8 +24,9 @@ let experience = [
     },
     {
         "sectionId": 1,
-        "jobTitle": "Junior Web Developer",
+        "jobTitle": "Web Developer",
         "company" : "Buoyant Technologies",
+        "imgPath": "images/html.png",
         "location" : "Columbia, MD",
         "startDate" : "Oct 2021",
         "endDate" : "March 2022",
