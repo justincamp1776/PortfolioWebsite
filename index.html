@@ -170,18 +170,9 @@
         <div class="row">
             <!--LEFT SIDE COLUMN-->
                 <div class="col-lg pl-5 pt-5 bg font-color-w">
-                  <!--Hit Count Row-->
-                  <div class="row justify-content-start pb-5">
-                    <div class="col-md-3 flex-column pb-3">
-                      <div class="col" class="align-text-bottom font-italic font-weight-light ml-2"> Hits:
-                          <span class="font-weight-bold font-yellow">85</span>
-                      </div>
-                    </div>
-                  </div>
-                <!---->
                   <div class="row">
                     <!--Menu Drop Down-->
-                    <div class="col-md-2 flex-column pb-3">
+                    <div class="col-md-2 flex-column">
                       <button class="btn btn-secondary mb-4 pr-5 pl-5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" active="true">
                           menu  
                       </button>
@@ -203,31 +194,31 @@
                           </div>
                         </div>
                       </div>
+                      
                     </div>
-                    <!--Profile Card-->
-                      <div class="col-md-8 mt-5"> 
-                        <div class="row ">
+                <!--Profile Card-->
+                <div class="col-md-8 mt-5"> 
+                  <div class="row ">
+                    <div class="col-12 d-flex justify-content-center">
+                      <img class="card-img-top collapse-center" src="images/nixon.jpg" style="width: 22rem;" alt="Card image cap">
+                    </div>
+                  </div>
+                      <!--Info Card-->
+                        <div class="row">
                           <div class="col-12 d-flex justify-content-center">
-                            <img class="card-img-top collapse-center" src="images/nixon.jpg" style="width: 22rem;" alt="Card image cap">
-                          </div>
-                        </div>
-                        
-                        <!--Info Card-->
-                          <div class="row">
-                            <div class="col-12 d-flex justify-content-center">
-                              <div class="card border-0" style="background-color:rgb(18, 18, 46); white-space: nowrap;">
-                                <div class="card-body justify-content-center">
-                                  <h2 class="card-title d-flex justify-content-center" style="letter-spacing: 0.15em;" id="name"></h2>
-                                  <h5 class="font-weight-light d-flex justify-content-center pt-2" style="letter-spacing: 0.1em;" id="title"></h5>
-                                  <div class="border-bottom border-warning"></div>
-                                  <p class="font-weight-light d-flex justify-content-center pt-1" style="font-size:medium;" id="description"></p>
-                                </div>
+                            <div class="card border-0" style="background-color:rgb(18, 18, 46); white-space: nowrap;">
+                              <div class="card-body justify-content-center">
+                                <h2 class="card-title d-flex justify-content-center" style="letter-spacing: 0.15em;" id="name"></h2>
+                                <h5 class="font-weight-light d-flex justify-content-center pt-2" style="letter-spacing: 0.1em;" id="title"></h5>
+                                <div class="border-bottom border-warning"></div>
+                                <p class="font-weight-light d-flex justify-content-center pt-1" style="font-size:medium;" id="description"></p>
                               </div>
                             </div>
                           </div>
-                        <!---->
-                      </div>
-                    <!---->
+                        </div>
+                      <!---->
+                  </div>
+                  <!---->
                   </div>
                 </div>
         <!--RIGHT SIDE COL-->
@@ -244,22 +235,22 @@
                         <img class="left" src="images/coding.png" style="max-height: 40px; max-width: 40px;" alt="coding img"> 
                       </div>
                   </div>
-                  <!--Full Span About Label
-                  <div class="row">
-                      <div class="col-12 mb-5 ">
-                        <a id="aboutJumpTo"><h6 class="align-text-bottom font-italic font-weight-light ml-2" style="letter-spacing: .3em;">About Me</h6</a>
-                      </div>
-                  </div>
-                  Closed-->
-                        
+                    <div class="row px-3">
                         <!--Content --><div class="justify-content-around font-weight-light mb-3 p-3 text-indent"id="about" style="letter-spacing:.13em;"></div>
-                        <div class="d-flex"> 
-                          <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                            get in touch
+                      </div>
+
+                        <div class="row">
+                          <div class="col-6">
+                            <button class="btn btn-warning" type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="max-width:45%;">
+                              get in touch
                             </button>
+                          </div> 
+                          <div class="col-6 pt-2">
+                            <h6> Hits: <span class="font-yellow">85</span></h6>
+                          </div>   
                         </div>
-                        
-                        
+
+
                         <div class="row mt-5 mb-2 w-100 border-2 border-bottom border-warning">
                             <a id="projectsJumpTo"><h5 class="mt-4 align-text-bottom font-italic font-weight-light ml-2">Projects</h5></a>
                           </div>
@@ -272,7 +263,6 @@
                         <!--Content --><div class="list-group" id="expList"></div>
                       </div>
                   <!---->
-            
           </div>
         </div>
       <!---->

@@ -52,8 +52,8 @@ let intro = [
 let about = [
     {
         "sectionId": 3,
-        "greeting": 'Welcome to my cloud resume site!', 
-        "aboutPro":'Welcome to my cloud resume site! In 2021, I pivoted into the world of software development. As I sometimes say, "From strength coach to strongly typed languages!". Over the past few years, I worked an unprecedented amount of hours building my trade craft. Most recently, I had the priveledge of serving as a programmer in support of one of our nation\'s largest HVAC distributors. I have worked with many languages and within many frameworks. While there is still more to learn, I am confident that I will be an asset to your team.',
+        "greeting": 'Welcome to my cloud resume website! You are visitor #: ', 
+        "aboutPro":'In 2021, I pivoted from strength coach to software developer, or as I sometimes say, "Strength coach to strongly typed languages!". Over the past few years, I have worked an unprecedented amount of hours building honing a trade craft. Most recently, I had the priveledge of serving as a programmer in support of one of our nation\'s largest HVAC distributors. I have worked with many languages and within many frameworks. While there is still more to learn, I am confident that I will be an asset to your team.',
         "aboutPriv":'When I am not working or studying I often roll around on mats practicing jiu-jitsu or pretending to be a rock star on my guitar. If you\'re reading this then I suppose you\'d like to learn about my development experience...I\'ll leave you to it!'
     },
 ];

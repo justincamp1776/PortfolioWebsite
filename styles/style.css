@@ -1,7 +1,6 @@
 
 @media (min-width: 990px){
     .contentBox{
-        display:grid;   
         max-height: 100lvh; 
         max-width: 100%;
         overflow-x: scroll;
