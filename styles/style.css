@@ -20,6 +20,19 @@
     }
 }
 
+.mr{
+    margin-right: 50px !important;
+}
+
+.title{
+    font-weight: 300 !important;
+    font-style: italic !important;
+}
+
+.italic{
+    font-style: italic;
+}
+
 .introContainer {
     position: relative;
     text-align: left;
@@ -43,6 +56,11 @@
     font-size: medium;
    
 }
+
+.textIndent{
+    text-indent: 75px;
+}
+
 
 .font-color-w{
     color: rgb(241, 246, 255);

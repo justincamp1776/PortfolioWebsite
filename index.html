@@ -160,7 +160,8 @@
       }
 
       function renderAbout(obj){
-        $("#about").append('<p>'+ obj.aboutPro +'</p>');
+        $("#greeting").append('<p style="color:font-color-w;">'+ obj.greeting +'85 </p>');
+        $("#about").append('<p>'+ obj.aboutPro +'/p>');
       }
 
   </script>
@@ -169,7 +170,9 @@
       <div class="container-fluid">
         <div class="row">
             <!--LEFT SIDE COLUMN-->
-                <div class="col-lg pl-5 pt-5 bg font-color-w">
+                <div class="col-lg pl-5 pt-1 bg font-color-w">
+                  <div class="row">
+                  </div>
                   <div class="row">
                     <!--Menu Drop Down-->
                     <div class="col-md-2 flex-column">
@@ -223,31 +226,33 @@
                 </div>
         <!--RIGHT SIDE COL-->
         <!--Scroll - About, Experience, Projects -->
-        <div class="col-lg pt-5 font-blue" > <!--justify-content-center-->
+        <div class="col-lg font-blue" > <!--justify-content-center-->
           <div class="contentBox">
-                  <div class="row pt-3 mb-5 w-100">
-                    <!--Full Row Header-->
-                      <div class="col d-flex justify-content-around">
-                        <img class="left" src="images/coach.png" style="max-height: 40px; max-width: 40px;" alt="coach img">
-                        <a id="aboutJumpTo"><h3> Coach</h3></a>
-                        <p class="pt-1" style="font-size:medium; font-weight:300;">=> to =></p>
-                        <h3>Coder</h3>
-                        <img class="left" src="images/coding.png" style="max-height: 40px; max-width: 40px;" alt="coding img"> 
-                      </div>
+                  <div class="d-inline-flex justify-content-start">
+                    <div class="pt-2">
+                      <h6 class="italic"><span class="font-yellow" id="hitCount">85</span> Hits</h6>
+                    </div>   
+                  </div>
+                  <div class="d-flex flex-row justify-content-around py-3">
+                    <img class="left " src="images/coach.png" style="max-height: 75px; max-width: 75px;" alt="coach img">
+                    <img class="right" src="images/coding.png" style="max-height: 75px; max-width: 75px;" alt="coding img">
+                  </div>
+                  <div class="d-flex justify-content-center pt-3 mr clearfix">
+                                      
+                  <a id="aboutJumpTo"><h3 class="pl-1"><span class="title">from</span> Coach 
+                    <span class="title">to </span> Coder</h3></a>
+                    
                   </div>
                     <div class="row px-3">
-                        <!--Content --><div class="justify-content-around font-weight-light mb-3 p-3 text-indent"id="about" style="letter-spacing:.13em;"></div>
+                        <!--Content --><div class="justify-content-around font-weight-light mb-3 p-3 pr-2 textIndent"id="about" style="letter-spacing:.13em;"></div>
                       </div>
 
                         <div class="row">
                           <div class="col-6">
-                            <button class="btn btn-warning" type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="max-width:45%;">
+                            <button class="btn btn-warning" type="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                               get in touch
                             </button>
                           </div> 
-                          <div class="col-6 pt-2">
-                            <h6> Hits: <span class="font-yellow">85</span></h6>
-                          </div>   
                         </div>
 
 
@@ -282,15 +287,13 @@
                           </ul>
                         </div>
                         <div class="col-md-4 offset-md-1 d-flex justify-content-center pt-5">
-                          <a href="https://aws.amazon.com/what-is-cloud-computing"><img src="https://d0.awsstatic.com/logos/powered-by-aws.png" alt="Powered by AWS Cloud Computing"></a>
+                          <a href="https://aws.amazon.com/what-is-cloud-computing"><img src="https://d0.awsstatic.com/logos/powered-by-aws.png" 
+                            alt="Powered by AWS Cloud Computing" style="max-height: 80px; max-width: 140px;"></a>
                         </div>
                       </div>
-                      <div class="row pb-1 px-3 pt-5">
-                        <div class="col-6 d-flex justify-content-start">
-                          <p style="color:black;"><span>&copy; </span> 2023 All rights are reserved.</p>
-                        </div>
-                        <div class="col-6 d-flex justify-content-end">
-                          <p style="color:black;">Baltimore, MD</p>
+                      <div class="row pb-1 pt-5">
+                        <div class="col-12 d-flex justify-content-center">
+                          <p style="color:black; font-size: x-small;"><span>&copy; </span> 2023 All rights are reserved.</p>
                         </div>
                       </div>
                 </div>
