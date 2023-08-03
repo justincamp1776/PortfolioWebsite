@@ -79,7 +79,7 @@ let projects = [
     {
         "sectionId": 5,
         "title": "Order Entry EDI",
-        "description": "Consolidated 50 programs into a single application using OOP. This program utilizes file watcher on an FTP directory and parses order entries of various formats. Once each file is validated the customer part numbers are mapped to vendor item numbers. Order headers and lines are dynamically built after each item is checked for availability within the customers market area. After orders complete processing an email is dynamically constructed and programmatically sent to all relavent parties.",
+        "description": "Consolidated 50 programs into a single application using OOP. This program utilizes file watcher on an FTP directory and parses order entries of various formats. Once each file is validated the customer part numbers are mapped to vendor item numbers. Order headers and lines are dynamically built after each item is checked for availability within the customers market area. After orders complete processing an email is dynamically constructed and programmatically sent to all relevant parties.",
         "techStack": ".NET Windows Application, Java Spring Data Service, SQL Server, SVN",
         "img": "motherboard.png",
         "repository":"EDIOrderEntry"
@@ -95,7 +95,7 @@ let projects = [
     {
         "sectionId": 5,
         "title": "Cloud Resume Challenge",
-        "description": "This site is driven by a serverless architecture that is powered by AWS. It is CI/CD using AWS Code Pipeline and GitHub. The backend consists of a simple and efficient http API, no-sql, dynamoDB, and a lambda function. All documents are stored as objects within an S3 Bucket and deployed as a static website using CloudFront.",
+        "description": "This site is driven by a serverless architecture that is powered by AWS. I've had a lot of fun building this site. I drew outside the lines a bit by breaking away from the Z-pattern for larger screens; however, the mobile responsiveness should give users a clean feel. This site is CI/CD using AWS Code Pipeline and GitHub. The backend consists of a simple http API, dynamoDB(no-sql), and a lambda function. All documents are stored as objects within an S3 Bucket and deployed as a static website using CloudFront.",
         "techStack": "html5, css, bootstrap, jQuery, Github, AWS Services",
         "img": "cloudresume.png",
         "repository":""
