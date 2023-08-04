@@ -102,7 +102,7 @@ let projects = [
     }
 ];
 
-let apiUrl = "https://bk45zz89f4.execute-api.us-east-1.amazonaws.com";
+let apiUrl = 'https://bk45zz89f4.execute-api.us-east-1.amazonaws.com';
 
 function getHeader(){
     return header;
