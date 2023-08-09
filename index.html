@@ -41,12 +41,10 @@
             });
         });
       });
-
       function getCountCallback(data, callbackParams){
         $("#hitCount").append(data);
         $('#countLabel').show();
       }
-
       function contactFormSubmitCallback(data, params){
         const responseText = params[params.length-1];
         console.log(responseText);
@@ -62,7 +60,6 @@
             });
         }
       }
-
       function ajaxGet(URL,callbackFunctionName, callbackFunctionParams){
         $.ajax({
             type: 'GET',
@@ -77,7 +74,6 @@
             },
         }); 
       }
-
       function ajaxPost(URL, dataObj, callbackFunctionName, callbackFunctionParams){
         $.ajax({
             type: "POST",
@@ -96,7 +92,6 @@
             },
         }); 
       }    
-      
       function getContent(){
         let hdr       = getHeader();
         let intro     = getIntro();
@@ -108,7 +103,6 @@
         renderContent(about);
         renderContent(projects);
       }
-
       function renderContent(data){
         for(var i=0; i<Object.keys(data).length; i++){
           if(data[i] !== undefined){
@@ -132,7 +126,6 @@
         }
           return true;
       }
-
       function showExperience(obj){
         $("#expList").append(
           '<div class="row mt-3" style="font-size:small;">'+
@@ -159,7 +152,6 @@
               '<ul></div></div>'
           );
         }
-
       function showProjects(obj){
         $("#projList").append(
           '<div class="row mb-5"><div class="col-sm-3"><div class="row justify-content-start mb-2"><img class="mt-4"src="images/'+ obj.img + '" alt="edi image" height="150px" width="150px"/></div>'+
@@ -176,29 +168,17 @@
           '</div> </div></div>'
         )
       }
-
       function showIntro(obj){
         console.log("intro" + obj.name)
         $("#name").append(obj.name);
         $("#title").append(obj.title);
         $("#description").append('<p class="text-wrap font-italic font-weight-light">'+ obj.description +'</p>');
       }
-
       function showAbout(obj){
         $("#greeting").append('<p style="color:font-color-w;">'+ obj.greeting +'85 </p>');
         $("#about").append('<p>'+ obj.aboutPro +'</p>');
       }
-     
-      function closeDialog(modalId, formId){
-        $('#'+ formId)[0].reset();
-        $('#contactFormModal').modal('hide');
-      }
-
-      function openConfirmCloseDialog(sourceModalId){
-        console.log("IN FUNCTION");
-        $('#triggeringModalId').val(sourceModalId);
-        $('#confirmFormResetBtn').trigger( "click" );
-      }
+    
   </script>
   </head>
   <body>
@@ -250,9 +230,19 @@
                                 <div class="border-bottom border-warning"></div>
                                 <p class="font-weight-light d-flex justify-content-center pt-1" style="font-size:medium;" id="description"></p>
                               </div>
+                              <div class="row ">
+                          <div class="col-12 justify-content-center mr d-flex ">
+                            <a href="docs/resume.pdf" download="JustinCampbellResume" style="color:white;" download>Resume.pdf</a>
+                          </div>
+                         
+
+                        </div>
                             </div>
                           </div>
                         </div>
+                        
+                       
+
                       <!---->
                   </div>
                   <!---->
