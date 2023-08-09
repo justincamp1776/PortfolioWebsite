@@ -21,7 +21,7 @@
 }
 
 .mr{
-    margin-right: 50px !important;
+    margin-right: 10px !important;
 }
 
 .title{
@@ -44,7 +44,6 @@
     top: 250px;
     left: 16px;
   }
-  
 
 .textabs{
     padding-left:0px;
@@ -60,7 +59,6 @@
 .textIndent{
     text-indent: 75px;
 }
-
 
 .font-color-w{
     color: rgb(241, 246, 255);
@@ -83,10 +81,13 @@
     background-color: #f5f5f5;
 }
 
-.counter{
-    color: rgb(190, 197, 200);
-    font-size: medium;
+.bg3{
+    background-color:rgb(255, 193, 7);
 }
 
-
-
+.bootbox-confirm div div {
+    background-color: rgb(3, 45, 62);
+    color:rgb(241, 246, 255);
+    font-weight: 700;
+    
+}
