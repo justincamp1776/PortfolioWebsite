@@ -46,8 +46,8 @@
   }
 
 .textabs{
-    padding-left:0px;
-    padding-right:0px;
+    padding:5px;
+   
     border-radius: 12.5px;
     max-width:75%;
     background-color:rgb(3, 45, 62);

@@ -88,9 +88,6 @@
             contentType: false,
             timeout: 60000,
             success: function (data, response, jxrHr){
-              console.log("AJAX"+response);
-              console.log("AJAX"+data);
-              console.log("AJAX"+jxrHr);
               callbackFunctionParams.push(response); 
               callbackFunctionName(data, callbackFunctionParams);
             },
@@ -150,11 +147,15 @@
                     '<p class="textabs text-center font-weight-bold">'+ obj.jobTitle +'</p>'+
                   '</div><div class="col float left">'+
               '</div></div>'+
-              '<ul class="">'+
-                '<li><p class="text-wrap">'+ obj.d1 +'</p></li>' +
-                '<li><p class="text-wrap">'+ obj.d2 +'</p></li>' +
-                '<li><p class="text-wrap">'+ obj.d3 +'</p></li>' +
-                '<li><p class="text-wrap">'+ obj.d4 +'</p></li> ' +
+              '<ul class="list-group">'+
+                '<li class="list-group-item" ><p>'+ obj.d1 +'</p></li>' +
+                '<li class="list-group-item"><p>'+ obj.d2 +'</p></li>' +
+                '<li class="list-group-item"><p>'+ obj.d3 +'</p></li>' +
+                '<li class="list-group-item"><p>'+ obj.d4 +'</p></li> ' +
+                '<li class="list-group-item"><p>'+ obj.d5 +'</p></li> ' +
+                '<li class="list-group-item"><p>'+ obj.d6 +'</p></li> ' +
+                '<li class="list-group-item"><p><span><img src="images/plies.png" alt="stack-icon" style="max-height:50; max-width:50px;"></span>'+
+                  ' Stack: '+ obj.stack +'</p></li> ' +
               '<ul></div></div>'
           );
         }
@@ -215,7 +216,7 @@
                       </button>
                       <div class="collapse" id="collapseExample">
                         <div class="bg">
-                          <div class="pb-5 d-flex justify-content-center collapse-start"><a class="font-yellow" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="font-size:medium;">Contact Me</a></div>
+                          <div class="pb-5 d-flex justify-content-center collapse-start"><button class="btn btn-md btn-warning"  type="button" data-bs-toggle="modal" data-bs-target="#contactFormModal">Contact</button></div>
                           <div class="pb-5 d-flex justify-content-center collapse-start"><a href="#aboutJumpTo" style="font-size:medium; color:#ffffff;">about</a></div>
                           <div class="pb-5 d-flex justify-content-center collapse-start"><a href="#experienceJumpTo" style="font-size:medium; color:#ffffff;">experience</a></div>
                           <div class="pb-5 d-flex justify-content-center collapse-start"><a href="#projectsJumpTo" style="font-size:medium; color:#ffffff;">projects</a></div>
@@ -310,16 +311,21 @@
                       <li><a class="font-blue" href="#aboutJumpTo">About</a></li>
                       <li><a class="font-blue" href="#experienceJumpTo">Experience</a></li>
                       <li><a class="font-blue" href="#projectsJumpTo">Projects</a></li>
-                      <li><a class="font-blue" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="font-size:medium;">Contact Me</a>
                     </ul>
                   </div>
-                  <div class="col-md-4 offset-md-1 d-flex justify-content-center pt-5">
-                    <a href="https://aws.amazon.com/what-is-cloud-computing"><img src="https://d0.awsstatic.com/logos/powered-by-aws.png" 
-                      alt="Powered by AWS Cloud Computing" style="max-height: 80px; max-width: 140px;"></a>
+                  <div class="col-md-4 offset-md-2 d-flex justify-content-center mt-3" style="max-height:50px;">
+                    <button class="btn btn-md btn-warning"  type="button" data-bs-toggle="modal" data-bs-target="#contactFormModal">
+                      Contact
+                    </button>
+                    
                   </div>
                 </div>
                 <div class="row pb-1 pt-5">
-                  <div class="col-12 d-flex justify-content-center">
+                    <div class="col-12 d-flex justify-content-center">
+                      <a href="https://aws.amazon.com/what-is-cloud-computing"><img src="https://d0.awsstatic.com/logos/powered-by-aws.png" 
+                        alt="Powered by AWS Cloud Computing" style="max-height: 80px; max-width: 140px;"></a>
+                    </div>
+                  <div class="col-12 pt-3 d-flex justify-content-center">
                     <p style="color:black; font-size: x-small;"><span>&copy; </span> 2023 All rights are reserved.</p>
                   </div>
                 </div>

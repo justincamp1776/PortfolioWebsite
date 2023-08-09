@@ -37,7 +37,7 @@ let experience = [
         "d2" : "Attended daily stand ups and met weekly sprint objectives in an agile work environment.",
         "d3" : "Refactored user authentication processes in React.js applications.",
         "d4" : "Created models and view functions in Python to support the user login process.",
-        "d5" : "Regularly delivered new UI features, improving the user experience.",
+        "d5" : "Regularly delivered new UI features to improve UX.",
         "d6" : "Manually debugged and tested new units of code. Also conducted manual regression testing to confirm all changes.",
         "stack" : "React.js, Django REST, SQLite, Material UI, Redux, Jira, Bit Bucket"
     }
@@ -59,7 +59,7 @@ let about = [
     {
         "sectionId": 3,
         "greeting": 'Welcome to my cloud resume website! You are visitor #: ', 
-        "aboutPro":'My aim is to reinforce my foundation in Software Engineering by serving within an organization where I can apply my current knowledge and skill set while also working to obtain a degree in Computer Science. I have built enterprise level applications and possess the problem solving skills to work through complex issues. I am hard working, analytical, and will add value to your team.',
+        "aboutPro":'My aim is to reinforce my foundation in Software Engineering by serving within an organization where I can apply my current knowledge and skill set while also working to obtain a degree in Computer Science. I am a coding boot camp graduate with almost 2 years of professional experience. During that time, I built enterprise level, full-stack applications. I have developed the problem-solving skills to work through complex issues and will add immense value to your team.',
         "aboutPriv":'When I am not working or studying I often roll around on mats practicing jiu-jitsu or pretending to be a rock star on my guitar. If you\'re reading this then I suppose you\'d like to learn about my development experience...I\'ll leave you to it!'
     },
 ];
@@ -94,15 +94,15 @@ let projects = [
         "sectionId": 5,
         "title": "XML Invoicing",
         "description": "This C# application transforms ANSI X12 EDI 810 Invoices into XML messages. It parses batch loads by scanning segments, identifying delimiters, and mapping to appropriate fields. It programmatically FTP’s and/ or emails XML Invoices to respective customers. This program is automated via Task Scheduler on Windows Server 2017.",
-        "techStack": ".NET, Java Spring MicroService, SQL Server, SVN",
+        "techStack": ".NET, Spring, SQL Server, SVN",
         "img": "invoice.png",
         "repository":""
     },
     {
         "sectionId": 5,
         "title": "Cloud Resume Challenge",
-        "description": "This site is driven by a serverless architecture that is powered by AWS. This site is CI/CD using AWS CodePipeline and GitHub. The backend consists of an HTTP API, DynamoDB(No-CQL), and a Lambda Function. All documents are stored as objects within an S3 Bucket and deployed as a static website using CloudFront.",
-        "techStack": "avaScript, JQuery, HTML5,CSS, AWS HTTP API, DynamoDB, Lambda, AWS CloudFront, GitHub, CodePipeline",
+        "description": "The back-end of this site is driven by a serverless architecture that is powered by AWS. This site is CI/CD using AWS CodePipeline and GitHub. The backend consists of an HTTP API, DynamoDB(No-CQL), and a Lambda Function. All documents are stored as objects within an S3 Bucket and deployed as a static website using CloudFront",
+        "techStack": "JavaScript, JQuery, Bootbox,HTML5,CSS, AWS HTTP API, DynamoDB, Lambda, AWS CloudFront, GitHub, CodePipeline",
         "img": "cloudresume.png",
         "repository":""
     }
