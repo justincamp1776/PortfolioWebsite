@@ -35,7 +35,8 @@
               }
               },
               callback: function (result) {
-                ajaxPost(getApiUrl() + "/items", file, contactFormSubmitCallback, null);
+                var callbackFunctionParams = [];
+                ajaxPost(getApiUrl() + "/items", file, contactFormSubmitCallback, callbackFunctionParams);
               }
             });
         });
@@ -46,10 +47,20 @@
         $('#countLabel').show();
       }
 
-      function contactFormSubmitCallback(data, responseText){
-
+      function contactFormSubmitCallback(data, params){
+        const responseText = params[params.length-1];
         console.log(responseText);
-        bootbox.alert('Thank you for your submission!');
+        if(responseText === "success"){
+          bootbox.alert({
+                size: 'small',
+                title: 'Success!',
+                message: 'Thank you for your submission.',
+                callback: function() { 
+                  $('#contactFormCloseBtn').click();
+                  $('#contactForm')[0].reset();
+                }
+            });
+        }
       }
 
       function ajaxGet(URL,callbackFunctionName, callbackFunctionParams){
@@ -57,8 +68,9 @@
             type: 'GET',
             url: url, 
             dataType: 'json',
-            success: function (data, responseText, jxrHr){
-              callbackFunctionName(data, callbackParams);
+            success: function (data, response, jxrHr){
+            
+              callbackFunctionName(data, callbackFunctionParams);
             },
             error: function (jxrHr, responseText, exThrown){
                 console.log(responseText);
@@ -75,7 +87,11 @@
             processData: false,
             contentType: false,
             timeout: 60000,
-            success: function (data, responseText, jxrHr){
+            success: function (data, response, jxrHr){
+              console.log("AJAX"+response);
+              console.log("AJAX"+data);
+              console.log("AJAX"+jxrHr);
+              callbackFunctionParams.push(response); 
               callbackFunctionName(data, callbackFunctionParams);
             },
             error: function (jxrHr, responseText, exThrown){
@@ -354,7 +370,7 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button type="button" id="contactFormCloseBtn" class="btn btn-secondary" onclick="return closeDialog('contactFormModal', 'contactForm')">Close</button>
+          <button type="button" id="contactFormCloseBtn" data-bs-dismiss="modal" class="btn btn-secondary" >Close</button>
           <button type="submit" class="btn btn-primary" id="SubmitBtn" >Submit</button>
         </div>
       </form>
