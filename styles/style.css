@@ -87,22 +87,9 @@
 
 .bootbox-confirm div div {
     background-color: #f0f3f4;
-<<<<<<< HEAD
-    font-weight: 700;
-    
-} 
-.bootbox-alert div div {
-    background-color: #f0f3f4;
-    font-weight: 700;
-} 
-
-#spinner { display:none; } 
-form.busy .spinner { display:block !important; }
-=======
     font-weight: 700;    
 } 
 .bootbox-alert div div {
     background-color: #f0f3f4;
     font-weight: 700;   
 } 
->>>>>>> b6b5bcf7a873fad0363408e3b558cc510ea863ef

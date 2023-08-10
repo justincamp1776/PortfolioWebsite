@@ -12,14 +12,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/6.0.0/bootbox.min.js" integrity="sha512-oVbWSv2O4y1UzvExJMHaHcaib4wsBMS5tEP3/YkMP6GmkwRJAa79Jwsv+Y/w7w2Vb/98/Xhvck10LyJweB8Jsw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>
-
      var isDirty = false;
-
       $(document).ready(function () {
-        
         $('#countLabel').hide();
         getContent();
-        //ajaxGet(getApiUrl() + "/items", getCountCallback, null);
+        ajaxGet(getApiUrl() + "/items", getCountCallback, null);
         var form = document.querySelector('#contactForm');        
         form.addEventListener('submit', function (e) {
             e.preventDefault();
@@ -85,12 +82,10 @@
           }
         });
       });
-
       function getCountCallback(data, callbackParams){
         $("#hitCount").append(data);
         $('#countLabel').show();
       }
-
       function contactFormSubmitCallback(data, params){
         const responseText = params[params.length-1];
         console.log(responseText);
@@ -364,9 +359,7 @@
           <!--Trailing Copyright-->
   </body>
 </html>
-
 <!--Contact Form/ Modal-->
-
 <div class="modal fade" id="contactFormModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="contactFormModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -408,12 +401,7 @@
         <div class="modal-footer">
           <button type="button" id="closeModal" data-bs-dismiss="modal" class="btn btn-secondary" >Close</button>
           <button type="submit" class="btn btn-primary" id="SubmitBtn">
-<<<<<<< HEAD
-            <span class="spinner spinner-border spinner-border-sm mr-3" id="spinner" role="status" aria-hidden="true">
-          </span>Submit</button>
-=======
             Submit</button>
->>>>>>> b6b5bcf7a873fad0363408e3b558cc510ea863ef
         </div>
       </form>
       </div>
