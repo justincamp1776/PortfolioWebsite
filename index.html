@@ -14,9 +14,10 @@
     <script>
      var isDirty = false;
       $(document).ready(function () {
+        console.log("This is just a github test.");
         $('#countLabel').hide();
         getContent();
-        ajaxGet(getApiUrl() + "/items", getCountCallback, null);
+       // ajaxGet(getApiUrl() + "/items", getCountCallback, null);
         var form = document.querySelector('#contactForm');        
         form.addEventListener('submit', function (e) {
             e.preventDefault();
