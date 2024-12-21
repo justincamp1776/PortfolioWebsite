@@ -1,4 +1,4 @@
-let header = [
+var header = [
     {
         "sectionId": 0,
         "greeting": "Welcome to my AWS cloud resume.",
@@ -8,7 +8,7 @@ let header = [
 ]
 
 
-let experience = [
+var experience = [
     {
         "sectionId": 1,
         "jobTitle": "Software Developer",
@@ -46,7 +46,7 @@ let experience = [
 
 
 
-let intro = [
+var intro = [
     {
         "sectionId": 2,
         "name": "Justin Campbell",
@@ -55,39 +55,54 @@ let intro = [
     },
 ];
 
-let about = [
+var about2 = [
     {
         "sectionId": 3,
         "greeting": 'Welcome to my cloud resume website! You are visitor #: ', 
-        "aboutPro":'My aim is to reinforce my foundation in Software Engineering by serving within an organization where I can apply my current knowledge and skill set while also working to obtain a degree in Computer Science. I am a coding boot camp graduate with almost 2 years of professional experience. During that time, I built enterprise level, full-stack applications. I have developed the problem-solving skills to work through complex issues and will add immense value to your team.',
-        "aboutPriv":'When I am not working or studying I often roll around on mats practicing jiu-jitsu or pretending to be a rock star on my guitar. If you\'re reading this then I suppose you\'d like to learn about my development experience...I\'ll leave you to it!'
+        "aboutPro":'Welcome to my cloud resume! I am a passionate Software Engineer with three years of professional experience, specializing in full-stack development. I have built enterprise-level applications and developed strong problem-solving skills. I’m eager to contribute to an innovative team, leveraging my technical expertise to drive success and tackle complex challenges.',
+        "aboutPriv":'When I’m not coding or working, you’ll likely find me on the mats practicing jiu-jitsu or channeling my inner rock star on the guitar. Since you’re here, I\’ll assume you\'re curious about my development experience—so I’ll var you dive right in!',
     },
 ];
 
-let edu = [
+var about = [
+    {
+        "sectionId": 3,
+        "aboutPro":'I am a passionate developer with extensive experience using .NET and Java Spring Frameworks to craft innovative solutions for complex challenges in the manufacturing and distribution sectors',
+        "aboutPro2": 'I am open to learn about new opportunities and look forward to connecting with you.'
+    },
+];
+
+var connect = [
+    {
+        "sectionId": 6,
+        "connect": 'I am open to learn about new opportunities and connecting with you!'
+    },
+];
+
+var edu = [
     {
         "sectionId": 4,
-        "school": "Southeastern Bible College",
-        "endDate": "Dec 2015",
-        "major": "International Missions",
-        "result": "22 credits" 
+        "school": "Community College of Baltimore County",
+        "endDate": "Dec 2025",
+        "major": "Computer Science",
+        "result": "Associate of Science (A.S.) in Computer Science" 
     },
     {
         "sectionId": 4,
         "school": "AWS",
-        "endDate": "Dec 2015",
+        "endDate": "Aug 2023",
         "major": "AWS Certified Cloud Practitioner",
         "result": "" 
     },
 ];
 
-let projects = [
+var projects = [
     {
         "sectionId": 5,
         "title": "Order Entry EDI",
         "description": "This C# program accounts for many variances across 50 corporations. A FileWatcher scans a directory every 15 minutes. If a new write is detected an event is raised. Once each file is validated the customer part numbers are mapped to vendor item numbers. Order headers and lines are dynamically built after each item is checked for availability within the customer’s market area. Complete orders are imported into an Epicor ERP. Lastly, a detailed order summary is dynamically constructed and emailed to all relevant parties.",
         "techStack": ".NET, Spring, SSMS, SVN",
-        "img": "motherboard.png",
+        "img": "data-science.png",
         "repository":"EDIOrderEntry"
     },
     {
@@ -95,7 +110,7 @@ let projects = [
         "title": "XML Invoicing",
         "description": "This C# application transforms ANSI X12 EDI 810 Invoices into XML messages. It parses batch loads by scanning segments, identifying delimiters, and mapping to appropriate fields. It programmatically FTP’s and/ or emails XML Invoices to respective customers. This program is automated via Task Scheduler on Windows Server 2017.",
         "techStack": ".NET, Spring, SQL Server, SVN",
-        "img": "invoice.png",
+        "img": "invoice2.png",
         "repository":""
     },
     {
@@ -103,12 +118,12 @@ let projects = [
         "title": "Cloud Resume Challenge",
         "description": "The back-end of this site is driven by a serverless architecture that is powered by AWS. This site is CI/CD using AWS CodePipeline and GitHub. The backend consists of an HTTP API, DynamoDB(No-CQL), and a Lambda Function. All documents are stored as objects within an S3 Bucket and deployed as a static website using CloudFront",
         "techStack": "JavaScript, JQuery, Bootbox,HTML5,CSS, AWS HTTP API, DynamoDB, Lambda, AWS CloudFront, GitHub, CodePipeline",
-        "img": "cloudresume.png",
+        "img": "workflow.png",
         "repository":""
     }
 ];
 
-let apiUrl = 'https://bk45zz89f4.execute-api.us-east-1.amazonaws.com';
+var apiUrl = 'https://bk45zz89f4.execute-api.us-east-1.amazonaws.com';
 
 function getHeader(){
     return header;
@@ -132,6 +147,10 @@ function getIntro(){
 
 function getAbout(){
     return about;
+}
+
+function getConnect(){
+    return connect;
 }
 
 function getEdu(){
