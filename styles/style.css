@@ -77,6 +77,11 @@
     
 }
 
+.bg-menu{
+    background-color:  rgb(18, 18, 46, .50);
+    
+}
+
 .bgtest{
     background-color: rgba(29, 78, 216, 0.15);
 }
@@ -86,7 +91,7 @@
 }
 
 .bg3{
-    background-color:rgb(255, 193, 7);
+    background-color:rgb(25, 25, 112);
 }
 
 .bootbox-confirm div div {
@@ -107,4 +112,8 @@
 .carousel-img{
     max-height:30px;
     max-width:30px;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url('../images/hamburger.png');
 }

@@ -27,6 +27,22 @@ var experience = [
     },
     {
         "sectionId": 1,
+        "jobTitle": "Software Developer",
+        "company" : "R.E. Michel Company",
+        "imgPath": "images/product.png",
+        "location" : "Glen Burnie, MD",
+        "startDate" : "March 2022",
+        "endDate" : "March 2023",
+        "d1" : "Full Stack Enterprise Application Development in C# and Java", 
+        "d2" : "Built EDI 850 Order Entry and EDI 810 Invoicing programs in C# that process over $1,000,000 annually.",
+        "d3" : "Created microservice processes in Java to support all Http requests for EDI accross 350 locations in 31 states.",
+        "d4" : "Refactored legacy sites written in Classic ASP and VB6 to support the integration with a new ERP.",
+        "d5" : "Aided in the migration of over 50 million records that were contained within our company’s 2000 plus data tables.",
+        "d6" : "Restructured SQL databases to implement modern standards, remit redundancy, and capitalize on entity-relationships.",
+        "stack" : ".NET, Spring, SSMS, JavaScript, JQuery, HTML5, CSS, Bootstrap, SVN"
+    },
+    {
+        "sectionId": 1,
         "jobTitle": "Web Developer",
         "company" : "Buoyant Technologies",
         "imgPath": "images/html.png",
@@ -67,7 +83,7 @@ var about2 = [
 var about = [
     {
         "sectionId": 3,
-        "aboutPro":'I am a passionate developer with extensive experience using .NET and Java Spring Frameworks to craft innovative solutions for complex challenges in the manufacturing and distribution sectors',
+        "aboutPro":'I am a passionate developer with extensive experience using .NET and Java Spring Frameworks to craft innovative solutions for complex challenges in the manufacturing and distribution sectors. I am open to learn about new opportunities and connecting with you!',
         "aboutPro2": 'I am open to learn about new opportunities and look forward to connecting with you.'
     },
 ];
